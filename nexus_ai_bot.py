@@ -13,6 +13,7 @@ logging.basicConfig(
 TELEGRAM_API_TOKEN = "5932171600:AAEAk-ZnCMRht1TAv2MG5am0XMs9GENsJuI"
 OPENAI_API_KEY = "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"
 
+
 # Initialize OpenAI GPT-3 API
 openai.api_key = OPENAI_API_KEY
 
