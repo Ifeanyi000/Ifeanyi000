@@ -32,7 +32,10 @@ def generate_response(prompt):
 
 def message_handler(update: Update, _: CallbackContext) -> None:
     user_message = update.message.text
-    prompt = f"{user_message}"
+    if "?" in user_message:
+        prompt = f"{user_message}"
+    else:
+        prompt = f"User: {user_message}\nAI:"
     generated_response = generate_response(prompt)
     update.message.reply_text(generated_response)
 
